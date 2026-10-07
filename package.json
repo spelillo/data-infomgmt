@@ -1,0 +1,21 @@
+{
+  "name": "data-infomgmt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Course site for Intro to Data and Information Management (12th grade, 15 weeks): weekly notes, interactive Excel workbooks, and auto-graded assignments and quizzes.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "serve": "node scripts/serve.js",
+    "test": "node --test \"test/*.test.js\"",
+    "test:unit": "node --test test/formula.test.js test/workbook.test.js test/pivot.test.js test/query.test.js test/grader.test.js test/xlsx.test.js",
+    "test:content": "node --test test/content.test.js",
+    "test:excel": "node --test test/xlsx.test.js test/libreoffice.test.js",
+    "test:e2e": "node --test test/e2e.test.js",
+    "fixtures": "python3 test/fixtures/make_fixtures.py"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}
